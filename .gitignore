@@ -4,3 +4,4 @@
 django_chunks.egg-info
 .DS_Store
 *.pyc
+.venv/

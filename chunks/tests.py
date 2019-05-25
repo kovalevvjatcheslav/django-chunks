@@ -108,10 +108,10 @@ class GetChuckTemplateTagTestCase(BaseTestCase):
                                  '{% get_chunk "home_page_left" as chunk_obj invalid %}')
 
     def test_should_fail_if_key_not_quoted(self):
-        with self.assertRaisesRegexp(TemplateSyntaxError, "Key argument to u'get_chunk' must be in quotes"):
+        with self.assertRaisesRegexp(TemplateSyntaxError, "Key argument to 'get_chunk' must be in quotes"):
             result = self.render_template('{% load chunks %}'
                                           '{% get_chunk home_page_left as chunk_obj %}')
 
-        with self.assertRaisesRegexp(TemplateSyntaxError, "Key argument to u'get_chunk' must be in quotes"):
+        with self.assertRaisesRegexp(TemplateSyntaxError, "Key argument to 'get_chunk' must be in quotes"):
             result = self.render_template('{% load chunks %}'
                                           '{% get_chunk "home_page_left\' as chunk_obj %}')
